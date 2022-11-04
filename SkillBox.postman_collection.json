@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "7d5cdfce-27ed-4a03-b0aa-573a4ba4b905",
+		"name": "SkillBox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23390988"
+	},
+	"item": [
+		{
+			"name": "Получение всех пользователей",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "vladislav.vasilyev",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "vladislav.vasilyev",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api-qa.skillbox.ru/practice2/api/users/",
+					"protocol": "http",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"practice2",
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение конкретного пользователя",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "vladislav.vasilyev",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "vladislav.vasilyev",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://api-qa.skillbox.ru/practice2/api/users/4",
+					"protocol": "http",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"practice2",
+						"api",
+						"users",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание нового пользоватлея",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "vladislav.vasilyev",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "vladislav.vasilyev",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"itemsOfClients\":\n  [\n\t  {\n\t   \"id\": 2147483646,\n\t   \"person\": {\n\t\t    \"name\": \"Анна\",\n\t\t    \"surname\": \"Белкина\",\n            \"Patronymic\": null,\n\t\t    \"dateOfBirth\": null,\n\t\t    \"location\": \"Москва\"\n\t              }\n\t\t}\n\t ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api-qa.skillbox.ru/practice2/api/users/create",
+					"protocol": "http",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"practice2",
+						"api",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создание нового пользоватлея Copy",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "vladislav.vasilyev",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "vladislav.vasilyev",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"update\": [\n\t\"name\": \"string (строка)\",\n\t\"surname\": \"string (строка)\",\n\t\"dateOfBirth\": \"формат даты dd.mm.YYYY\"\n\t\"location: \"string (строка)\"\n\t ]\n  }\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api-qa.skillbox.ru/practice2/api/users/create",
+					"protocol": "http",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"practice2",
+						"api",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Редактирование существующего пользователя",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "vladislav.vasilyev",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "vladislav.vasilyev",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"update\": {\n   \"location\" : \"string (строка)\"\n    }\n }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api-qa.skillbox.ru/practice2/api/users/4/update",
+					"protocol": "http",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"practice2",
+						"api",
+						"users",
+						"4",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление конкретного пользователя",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "vladislav.vasilyev",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "vladislav.vasilyev",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://api-qa.skillbox.ru/practice2/api/users/1/delete",
+					"protocol": "http",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"practice2",
+						"api",
+						"users",
+						"1",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление всех пользователей",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "vladislav.vasilyev",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "vladislav.vasilyev",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://api-qa.skillbox.ru/practice2/api/users/allUsers/delete",
+					"protocol": "http",
+					"host": [
+						"api-qa",
+						"skillbox",
+						"ru"
+					],
+					"path": [
+						"practice2",
+						"api",
+						"users",
+						"allUsers",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
